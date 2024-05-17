@@ -14,12 +14,12 @@ export function SignOutDialog() {
   return (
     <>
       <dialog
-        className={`fixed left-0 top-0 w-full h-full ${
+        className={`dark:bg-[unset] fixed left-0 top-0 w-full h-full ${
           modal ? "bg-black bg-opacity-50 z-50 backdrop-blur" : "-z-20"
         } flex justify-center items-center overflow-hidden`}
       >
         <div
-          className={`mx-8 md:mx-[unset] p-[40px] bg-white rounded-2xl shadow-xl  transition-all duration-300 ${
+          className={`mx-8 md:mx-[unset] p-[40px] bg-white dark:bg-[unset] rounded-2xl shadow-xl  transition-all duration-300 ${
             modal
               ? "bottom-0 md:translate-y-0 -translate-y-[112px]"
               : "bottom-0 translate-y-[500px] md:translate-y-[500px]"
@@ -55,10 +55,7 @@ export function TopNavigationBar() {
   const user = useAuthContext();
   const pathName = usePathname();
   return (
-    <div className="h-14 md:h-16 px-4 flex justify-end items-center">
-      <div className="grow">
-        <Menu className="mx-2 my-4 grow md:hidden" />
-      </div>
+    <div className="h-14 md:h-16 relative z-10 px-4 flex justify-end items-center">
       {user !== null && user.photoURL !== null && (
         <Link href="?signout">
           <img

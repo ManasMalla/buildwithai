@@ -45,8 +45,22 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`text-neutral-600`}>
+      <body>
         {/* <Navbar /> */}
+        <div className="bg-[#1a73e8] py-4 px-4 sticky z-10 w-full text-center text-sm">
+          Check out the biggest fest of Andhra Pradesh, organized by Google
+          Developer Students Clubs.{" "}
+          <span className="font-medium ">
+            Register for the WoW 2024 Visakhapatnam{" "}
+            <a
+              href="https://wow.vizag.dev"
+              className="font-bold text-amber-300"
+            >
+              here
+            </a>
+            .
+          </span>
+        </div>
         <AuthContextProvider>
           <div className="flex flex-col-reverse md:flex-row items-center justify-center overflow-hidden w-screen h-screen">
             <div className="h-[64px] md:hidden" />

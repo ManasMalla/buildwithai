@@ -2,6 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  overflow: hidden;
+  font-family: "Google Sans", "Roboto", arial, sans-serif;
+  font-weight: 400;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bard-color-surface: #fff;
+  --bard-color-surface-rgb: 255, 255, 255;
+  --bard-color-brand-text-gradient-stop-1: #4285f4;
+  --bard-color-brand-text-gradient-stop-1-rgb: 66, 133, 244;
+  --bard-color-brand-text-gradient-stop-2: #9b72cb;
+  --bard-color-brand-text-gradient-stop-2-rgb: 155, 114, 203;
+  --bard-color-brand-text-gradient-stop-3: #d96570;
+  --bard-color-brand-text-gradient-stop-3-rgb: 217, 101, 112;
+}
+
+.bard-hello {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  background: -webkit-linear-gradient(
+    16deg,
+    var(--bard-color-brand-text-gradient-stop-1) 0,
+    var(--bard-color-brand-text-gradient-stop-2) 9%,
+    var(--bard-color-brand-text-gradient-stop-3) 20%,
+    var(--bard-color-brand-text-gradient-stop-3) 24%,
+    var(--bard-color-brand-text-gradient-stop-2) 35%,
+    var(--bard-color-brand-text-gradient-stop-1) 44%,
+    var(--bard-color-brand-text-gradient-stop-2) 50%,
+    var(--bard-color-brand-text-gradient-stop-3) 56%,
+    var(--bard-color-surface) 75%,
+    var(--bard-color-surface) 100%
+  );
+  background: linear-gradient(
+    74deg,
+    var(--bard-color-brand-text-gradient-stop-1) 0,
+    var(--bard-color-brand-text-gradient-stop-2) 9%,
+    var(--bard-color-brand-text-gradient-stop-3) 20%,
+    var(--bard-color-brand-text-gradient-stop-3) 24%,
+    var(--bard-color-brand-text-gradient-stop-2) 35%,
+    var(--bard-color-brand-text-gradient-stop-1) 44%,
+    var(--bard-color-brand-text-gradient-stop-2) 50%,
+    var(--bard-color-brand-text-gradient-stop-3) 56%,
+    var(--bard-color-surface) 75%,
+    var(--bard-color-surface) 100%
+  );
+
+  background-size: 400% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,16 +73,40 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #060606;
+}
+
+.gemini-landing-hero:before {
+  aspect-ratio: 1440/1520;
+  background-image: url("/images/hero-gradient.jpg");
+  background-size: 140%;
+  background-repeat: no-repeat;
+  background-position: center -200px;
+  content: "";
+  inline-size: 100vw;
+  inset-block-start: 0;
+  inset-inline-start: 50%;
+  max-inline-size: 1440px;
+  position: absolute;
+  transform: translate(-50%, -40px);
+  z-index: 1;
+  transition: opacity 0.8s var(--gemini-ease-out-quad);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+
+.gemini-section-hero .gemini-competition-star {
+  max-inline-size: 128px;
+  line-height: 0;
+  margin-inline: auto;
+}
+@media screen and (min-width: 834px) {
+  .gemini-section-hero .gemini-competition-star {
+    max-inline-size: 214px;
   }
 }
