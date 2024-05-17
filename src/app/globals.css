@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 * {
+  
   overflow: hidden;
   font-family: "Google Sans", "Roboto", arial, sans-serif;
   font-weight: 400;
@@ -11,6 +12,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --bard-color-surface: #fff;
+  --gemini-size-grid-gap: 20px
   --bard-color-surface-rgb: 255, 255, 255;
   --bard-color-brand-text-gradient-stop-1: #4285f4;
   --bard-color-brand-text-gradient-stop-1-rgb: 66, 133, 244;
@@ -18,6 +20,206 @@
   --bard-color-brand-text-gradient-stop-2-rgb: 155, 114, 203;
   --bard-color-brand-text-gradient-stop-3: #d96570;
   --bard-color-brand-text-gradient-stop-3-rgb: 217, 101, 112;
+  --gemini-color-black: rgb(0 0 0);
+  --gemini-color-white: rgb(255 255 255);
+
+  --gemini-color-grey-50: #F7F9FD;
+  --gemini-color-grey-100: #F0F3F8;
+  --gemini-color-grey-200: #D2D8E4;
+  --gemini-color-grey-300: #B7BECF;
+  --gemini-color-grey-400: #939DB6;
+  --gemini-color-grey-500: #828FB1;
+  --gemini-color-grey-600: #2F3543;
+  --gemini-color-grey-700: #1B212D;
+  --gemini-color-grey-800: #161823;
+  --gemini-color-grey-900: #060606;
+
+  --gemini-color-blue-50: #E8F0FE;
+  --gemini-color-blue-100: #D2E3FC;
+  --gemini-color-blue-200: #AECBFA;
+  --gemini-color-blue-300: #8AB4F8;
+  --gemini-color-blue-400: #669DF6;
+  --gemini-color-blue-500: #4285F4;
+  --gemini-color-blue-600: #1A73E8;
+  --gemini-color-blue-700: #1967D2;
+  --gemini-color-blue-800: #185ABC;
+  --gemini-color-blue-900: #174EA6;
+  --gemini-color-green-50: #E6F4EA;
+  --gemini-color-green-100: #CEEAD6;
+  --gemini-color-green-200: #A8DAB5;
+  --gemini-color-green-300: #81C995;
+  --gemini-color-green-400: #5BB974;
+  --gemini-color-green-500: #34A853;
+  --gemini-color-green-600: #1E8E3E;
+  --gemini-color-green-700: #188038;
+  --gemini-color-green-800: #137333;
+  --gemini-color-green-900: #0D652D;
+  --gemini-color-cyan-50: #E4F7FB;
+  --gemini-color-cyan-100: #CBF0F8;
+  --gemini-color-cyan-200: #A1E4F2;
+  --gemini-color-cyan-300: #78D9EC;
+  --gemini-color-cyan-400: #4ECDE6;
+  --gemini-color-cyan-500: #24C1E0;
+  --gemini-color-cyan-600: #12B5CB;
+  --gemini-color-cyan-700: #129EAF;
+  --gemini-color-cyan-800: #098591;
+  --gemini-color-cyan-900: #007B83;
+
+  --gemini-color-gemini-peach: #FFDDB7;
+  --gemini-color-gemini-blue: #076EFF;
+  --gemini-color-gemini-cyan: #4FABFF;
+  --gemini-color-gemini-light-blue: #B1C5FF;
+  --gemini-color-gemini-white: var(--gemini-color-white);
+  --gemini-color-gemini-grey-700: #5F6368;
+  --gemini-color-gemini-grey-900: #202124;
+
+  --gemini-branding-button-gradient: linear-gradient(15deg, #217BFE 1.02%, #078EFB 28.51%, #A190FF 80.14%, #BD99FE 102.85%);
+  --gemini-branding-text-gradient: linear-gradient(90deg, #217BFE 0%, #078EFB 33.53%, #AC87EB 67.74%, #EE4D5D 100%);
+
+  --gemini-gradient-linear-colors: var(--gemini-color-gemini-blue) 5.96%, var(--gemini-color-gemini-cyan) 56.89%, var(--gemini-color-gemini-light-blue) 93.53%;
+  --gemini-gradient-linear: linear-gradient(53deg, #0260FF 9.29%, #40A2FF 48.23%, #A8BEFF 82.56%);
+
+  --gemini-text-gradient-light-blue: linear-gradient(69deg, #AABDF4 16.42%, #FFF 77.56%, #A8BEFF 124.91%);
+  --gemini-text-gradient-blue-2: linear-gradient(51deg, #0260FF 5.96%, #40A2FF 47.17%, #A8BEFF 79.1%);
+  --gemini-text-gradient-yellow: linear-gradient(90deg, #EDBD87 0%, #FFE7C6 102.34%);
+  --gemini-text-gradient-red-2: linear-gradient(90deg, #E0029F 19.87%, #FF2F3B 46.25%, #FCBCDB 76.59%, #C7FFC7 104.29%);
+
+  --gemini-color-foreground: var(--gemini-color-white);
+  --gemini-color-background: var(--gemini-color-grey-900);
+
+  --gemini-font-primary: 'Google Sans', Arial, Helvetica, sans-serif;
+  --gemini-font-secondary: 'Roboto Mono', Courier, monospace;
+  --gemini-font-tertiary: 'Google Sans Text', Arial, Helvetica, sans-serif;
+
+  --gemini-font-size-base: 16px;
+
+  --gemini-size-grid-margin: 20px;
+  --gemini-size-max-width: 1440px;
+  --gemini-size-grid-gap: 8px;
+
+}
+
+
+@media (min-width: 768px) {
+  * {
+    --gemini-size-grid-margin: 40px;
+    --gemini-size-grid-gap: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  * {
+    --gemini-size-grid-margin: 80px;
+  }
+}
+
+/** Corners */
+
+* {
+  --gemini-corner-radius-small: 8px;
+  --gemini-corner-radius-medium: 16px;
+}
+
+@media (min-width: 1440px) {
+  * {
+    --gemini-corner-radius-small: 12px;
+  }
+}
+
+* {
+  --gemini-space-8: 8px;
+  --gemini-space-12: 12px;
+  --gemini-space-16: 16px;
+  --gemini-space-24: 24px;
+  --gemini-space-32: 32px;
+  --gemini-space-40: 40px;
+  --gemini-space-48: 48px;
+  --gemini-space-56: 56px;
+  --gemini-space-64: 64px;
+  --gemini-space-72: 72px;
+  --gemini-space-80: 80px;
+  --gemini-space-88: 88px;
+  --gemini-space-96: 96px;
+  --gemini-space-120: 120px;
+  --gemini-space-140: 140px;
+  --gemini-space-164: 164px;
+  --gemini-space-180: 180px;
+  --gemini-space-200: 200px;
+  --gemini-space-220: 220px;
+  --gemini-space-240: 240px;
+  --gemini-space-264: 264px;
+  --gemini-space-280: 280px;
+  --gemini-space-320: 320px;
+  --gemini-space-360: 360px;
+  --gemini-space-440: 400px;
+
+  --gemini-space-d8: var(--gemini-space-8);
+  --gemini-space-d12: var(--gemini-space-12);
+  --gemini-space-d16: var(--gemini-space-16);
+  --gemini-space-d24: var(--gemini-space-16);
+  --gemini-space-d32: var(--gemini-space-24);
+  --gemini-space-d40: var(--gemini-space-32);
+  --gemini-space-d48: var(--gemini-space-40);
+  --gemini-space-d64: var(--gemini-space-48);
+  --gemini-space-d72: var(--gemini-space-56);
+  --gemini-space-d88: var(--gemini-space-64);
+  --gemini-space-d120: var(--gemini-space-88);
+  --gemini-space-d140: var(--gemini-space-120);
+  --gemini-space-d180: var(--gemini-space-120);
+  --gemini-space-d220: var(--gemini-space-180);
+  --gemini-space-d264: var(--gemini-space-180);
+  --gemini-space-d280: var(--gemini-space-200);
+  --gemini-space-d320: var(--gemini-space-220);
+  --gemini-space-d360: var(--gemini-space-240);
+  --gemini-space-d440: var(--gemini-space-264);
+}
+
+@media (min-width: 834px) {
+  .gemini-page {
+    --gemini-space-d8: var(--gemini-space-8);
+    --gemini-space-d12: var(--gemini-space-12);
+    --gemini-space-d16: var(--gemini-space-16);
+    --gemini-space-d24: var(--gemini-space-24);
+    --gemini-space-d32: var(--gemini-space-32);
+    --gemini-space-d40: var(--gemini-space-40);
+    --gemini-space-d48: var(--gemini-space-48);
+    --gemini-space-d64: var(--gemini-space-64);
+    --gemini-space-d72: var(--gemini-space-72);
+    --gemini-space-d88: var(--gemini-space-88);
+    --gemini-space-d120: var(--gemini-space-120);
+    --gemini-space-d140: var(--gemini-space-140);
+    --gemini-space-d180: var(--gemini-space-180);
+    --gemini-space-d220: var(--gemini-space-220);
+    --gemini-space-d264: var(--gemini-space-264);
+    --gemini-space-d280: var(--gemini-space-280);
+    --gemini-space-d320: var(--gemini-space-320);
+    --gemini-space-d360: var(--gemini-space-360);
+    --gemini-space-d440: var(--gemini-space-440);
+  }
+}
+
+.gemini-page {
+  --gemini-ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  --gemini-ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --gemini-ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  --gemini-ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  --gemini-ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  --gemini-ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  --gemini-ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --gemini-ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --gemini-ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --gemini-ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --gemini-ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --gemini-ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+  --gemini-ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --gemini-ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --gemini-ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+  --gemini-ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+  --gemini-ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+  --gemini-ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  --gemini-ease-out-back: cubic-bezier(0.34, 1.85, 0.64, 1);
+  --gemini-viewport-height: 100vh;
+  --gemini-100vh: var(--gemini-viewport-height, 100vh);
 }
 
 .bard-hello {
@@ -57,19 +259,14 @@
   -webkit-text-fill-color: transparent;
 }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
+
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -109,4 +306,206 @@ body {
   .gemini-section-hero .gemini-competition-star {
     max-inline-size: 214px;
   }
+}
+
+
+.gemini-gem-advantages {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  gap: var(--gemini-size-grid-gap);
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .gemini-gem-advantages {
+    flex-direction: row;
+  }
+}
+
+.gemini-gem-advantage {
+  --gemini-spark-box-item-size: 100%;
+  flex: 1;
+}
+.gemini-gem-advantage > * {
+  height: 100%;
+}
+.gemini-gem-advantage .gemini-spark-box-item {
+  --gemini-border-radius: 16;
+}
+@media (min-width: 834px) {
+  .gemini-gem-advantage .gemini-spark-box-item {
+    --gemini-border-radius: 24;
+  }
+}
+.gemini-gem-advantage .gemini-gem-advantage__content {
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, #141620 33.64%, rgba(20, 21, 26, 0.42) 99.95%);
+  border-radius: 16px;
+}
+@media (min-width: 834px) {
+  .gemini-gem-advantage .gemini-gem-advantage__content {
+    border-radius: 24px;
+  }
+}
+.gemini-gem-advantage .gemini-gem-advantage__icon {
+  block-size: auto;
+  inline-size: 34px;
+  margin-block-end: 32px;
+}
+@media (min-width: 834px) {
+  .gemini-gem-advantage .gemini-gem-advantage__icon {
+    inline-size: 44px;
+  }
+}
+.gemini-gem-advantage .gemini-gem-advantage__copy {
+  color: var(--gemini-color-grey-500);
+  padding-inline-end: 5px;
+  max-inline-size: 560px;
+}
+
+
+.gemini-type-t1-medium{
+  font-weight: 500;
+  line-height: 140%;
+  font-size: 1.25rem;
+}
+
+.gemini-type-b2{
+  line-height: 140%;
+  font-size: 0.875rem;
+}
+
+.gemini-gem-advantage__title{
+  margin-bottom: 20px;
+}
+
+
+/* Gemini Pill Button */
+.gemini-page .gemini-btn {
+  --gemini-_border: var(--gemini-button-border, var(--gemini-color-grey-600));
+  --gemini-_background: var(--gemini-button-fill, transparent);
+  --gemini-_text: var(--gemini-button-text, inherit);
+  border: 0;
+  appearance: none;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  color: var(--gemini-_text);
+  background-color: var(--gemini-_background);
+  user-select: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99em;
+  /* padding: 18px 24px; */
+  leading-trim: both;
+  height: auto;
+}
+
+.gemini-page .gemini-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.gemini-page .gemini-btn::before {
+  position: absolute;
+  content: '';
+  inset: 0;
+  border-radius: inherit;
+  will-change: opacity;
+  transition-property: opacity;
+  transition-duration: 0.25s;
+  opacity: 0;
+}
+
+.gemini-page .gemini-btn:hover::before {
+  opacity: 1;
+}
+
+.gemini-page .gemini-btn.gemini-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Gemini Primary Button */
+.gemini-page .gemini-btn.gemini-primary {
+  --gemini-_text: var(--gemini-button-text, var(--gemini-color-white));
+  --gemini-_background: var(--gemini-button-fill, var(--gemini-color-gemini-blue));
+}
+
+.gemini-page .gemini-btn.gemini-primary::before {
+  background-color: var(--gemini-color-blue-800);
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 0.3),
+  0 1px 3px 1px rgb(60 64 67 / 0.15);
+}
+
+.gemini-page .gemini-btn.gemini-primary:hover::before {
+  opacity: 1;
+}
+
+/* Gemini Secondary Button */
+.gemini-page .gemini-btn.gemini-secondary {
+  border: 1px solid var(--gemini-_border);
+  transition: color 0.18s ease-in-out, background 0.2s ease-in-out;
+
+}
+
+.gemini-page .gemini-btn.gemini-secondary::before {
+  background-color: var(--gemini-button-hover, rgb(255 255 255 / 0.09));
+}
+
+/* Gemini Tertiary Button */
+.gemini-page .gemini-btn.gemini-tertiary {
+  --gemini-_text: var(--gemini-button-text, var(--gemini-color-white));
+  inline-size: 100%;
+  padding-inline: 20px;
+  padding-block: 10px;
+  transition: transform 0.18s ease-in-out, background 0.2s ease-in-out;
+}
+
+.gemini-page .gemini-btn.gemini-tertiary.gemini-has--icon {
+  padding-inline: 18px 20px;
+}
+
+.gemini-page .gemini-btn.gemini-tertiary::before {
+  background-color: var(--gemini-button-hover);
+}
+
+/* Gemini Gradient Button */
+.gemini-page .gemini-btn.gemini-gradient {
+  position: relative;
+  --gemini-_background: var(
+    --gemini-button-fill,
+    /* linear-gradient(53deg, #1A73E8 9.29%, #40A2FF 48.23%, #A8BEFF 82.56%) */
+    linear-gradient(15deg, rgb(33, 123, 254) 1.02%, rgb(7, 142, 251) 28.51%, rgb(161, 144, 255) 80.14%, rgb(189, 153, 254) 102.85%)
+  );
+  background-image: var(--gemini-_background);
+  transition: color 0.18s;
+}
+
+.gemini-page .gemini-btn.gemini-gradient::before {
+  background: var(--gemini-button-hover-background, var(--gemini-color-white));
+}
+
+.gemini-page .gemini-btn.gemini-gradient:hover {
+  color: var(--gemini-button-hover-color, var(--gemini-color-grey-900)) !important;
+}
+
+.gemini-page .gemini-btn.gemini-gradient:hover::before {
+  opacity: 1;
+}
+
+.register-input{
+  border: 1.5px solid #d3d3d3;
+  padding: 16px 24px;
+  border-radius: 12px;
+
+  background-color: #000000;
 }

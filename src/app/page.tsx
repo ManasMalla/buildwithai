@@ -1,3 +1,4 @@
+import Advantages from "@/components/Advantages/page";
 import Image from "next/image";
 
 export default function Home() {
@@ -32,6 +33,22 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <section className="gemini-gem-advantages w-full px-[90px]">
+          <Advantages
+            title=" Responsible by design"
+            description="Incorporating comprehensive safety measures, these models help ensure
+          responsible and trustworthy AI solutions through curated datasets and
+          rigorous tuning."
+          />
+          <Advantages
+            title=" Unmatched performance at size"
+            description="Gemma models achieve exceptional benchmark results at its 2B and 7B sizes, even outperforming some larger open models."
+          />
+          <Advantages
+            title="Framework flexible"
+            description="With Keras 3.0, enjoy seamless compatibility with JAX, TensorFlow, and PyTorch, empowering you to effortlessly choose and switch frameworks depending on your task."
+          />
+        </section>
       </div>
     </div>
   );

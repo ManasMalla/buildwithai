@@ -45,27 +45,28 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body className="dark">
         {/* <Navbar /> */}
-        <div className="bg-[#1a73e8] py-4 px-4 sticky z-10 w-full text-center text-sm">
-          Check out the biggest fest of Andhra Pradesh, organized by Google
-          Developer Students Clubs.{" "}
-          <span className="font-medium ">
-            Register for the WoW 2024 Visakhapatnam{" "}
-            <a
-              href="https://wow.vizag.dev"
-              className="font-bold text-amber-300"
-            >
-              here
-            </a>
-            .
-          </span>
-        </div>
+
         <AuthContextProvider>
           <div className="flex flex-col-reverse md:flex-row items-center justify-center overflow-hidden w-screen h-screen">
             <div className="h-[64px] md:hidden" />
             <div className="w-full md:w-[unset] h-full overflow-y-scroll grow">
+              <div className="bg-[#1a73e8] py-4 px-4 relative z-20 w-full text-center text-sm mb-4">
+                Check out the biggest fest of Andhra Pradesh.{" "}
+                <span className="font-medium ">
+                  Register for the GDSC WoW 2024 Visakhapatnam{" "}
+                  <a
+                    href="https://wow.vizag.dev"
+                    className="font-bold text-amber-300"
+                  >
+                    here
+                  </a>
+                  .
+                </span>
+              </div>
               <TopNavigationBar />
+
               {children}
               <SignOutDialog />
               <Footer />

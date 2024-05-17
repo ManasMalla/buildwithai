@@ -19,7 +19,7 @@ export function SignOutDialog() {
         } flex justify-center items-center overflow-hidden`}
       >
         <div
-          className={`mx-8 md:mx-[unset] p-[40px] bg-white dark:bg-[unset] rounded-2xl shadow-xl  transition-all duration-300 ${
+          className={`mx-8 md:mx-[unset] p-[40px] bg-white dark:bg-[#202023] text-white rounded-2xl shadow-xl  transition-all duration-300 ${
             modal
               ? "bottom-0 md:translate-y-0 -translate-y-[112px]"
               : "bottom-0 translate-y-[500px] md:translate-y-[500px]"
@@ -55,7 +55,7 @@ export function TopNavigationBar() {
   const user = useAuthContext();
   const pathName = usePathname();
   return (
-    <div className="h-14 md:h-16 relative z-10 px-4 flex justify-end items-center">
+    <div className="gemini-page h-14 md:h-16 relative z-10 px-4 flex justify-end items-center">
       {user !== null && user.photoURL !== null && (
         <Link href="?signout">
           <img
@@ -75,14 +75,14 @@ export function TopNavigationBar() {
       )}
       {user !== null && !pathName.includes("/register") && (
         <Link href="/register" className="flex">
-          <button className="my-3 md:mx-3 mr-0 ml-3 py-[10px] bg-[#1a73e8] text-white font-medium text-sm px-5 rounded-lg">
-            Register
+          <button className="my-3 md:mx-3 mr-0 ml-3 py-[10px]  gemini-btn gemini-gradient  gemini-type-btn font-medium text-sm px-5 rounded-lg">
+            <span>Register</span>
           </button>
         </Link>
       )}
       {user === null && (
         <button
-          className="mr-2 py-3 px-2 font-medium text-[#1a73e8]"
+          className="mr-2 py-2 px-8 font-medium gemini-btn gemini-secondary  gemini-type-btn"
           onClick={() => {
             signInWithGoogleAsPopup(
               (user: User | null) => {
@@ -94,7 +94,7 @@ export function TopNavigationBar() {
             );
           }}
         >
-          Sign In
+          <span>Sign In</span>
         </button>
       )}
     </div>
