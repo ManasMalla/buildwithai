@@ -17,7 +17,7 @@ export default function Home() {
             <h2 className="bard-hello w-max text-5xl lg:text-8xl font-bold mt-3 md:mt-6 mb-4">
               Build With AI
             </h2>
-            <p className="max-w-[400px] text-sm md:text-base text-center">
+            <p className="max-w-[480px] text-sm md:text-base text-center">
               Google Developer Groups Vizag brings you the once in a lifetime
               opportunity to learn and build with state-of-the-art generative
               models and tools to make AI helpful for everyone
