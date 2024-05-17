@@ -60,11 +60,11 @@ export default function Gallery() {
       />
       <div className="gallery_info">
         <div>
-          <h2>DSC Andhra Pradesh '24 highlights</h2>
+          <h2>DSC Andhra Pradesh &apos;24 highlights</h2>
           <p>
-            This year's student clubs built lots of excitement. Check out photos
-            from featured talks, hands-on learning sessions, and after-hours
-            fun.
+            This year&apos;s student clubs built lots of excitement. Check out
+            photos from featured talks, hands-on learning sessions, and
+            after-hours fun.
           </p>
         </div>
         <a
