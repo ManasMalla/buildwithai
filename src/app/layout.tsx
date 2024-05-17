@@ -144,8 +144,8 @@ export default function RootLayout({
       </head>
       <body className={`text-neutral-600`}>
         {/* <Navbar /> */}
-        <div className="flex flex-col-reverse md:flex-row items-center justify-center overflow-hidden w-screen h-screen">
-          <AuthContextProvider>
+        <AuthContextProvider>
+          <div className="flex flex-col-reverse md:flex-row items-center justify-center overflow-hidden w-screen h-screen">
             <div className="h-[64px] md:hidden" />
             <div className="w-full md:w-[unset] h-full overflow-y-scroll grow">
               <TopNavigationBar />
@@ -153,8 +153,8 @@ export default function RootLayout({
               <SignOutDialog />
               <Footer />
             </div>
-          </AuthContextProvider>
-        </div>
+          </div>
+        </AuthContextProvider>
       </body>
     </html>
   );
