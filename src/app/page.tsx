@@ -33,20 +33,18 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <section className="gemini-gem-advantages w-full px-[90px]">
+        <section className="gemini-gem-advantages w-full px-[20px] md:px-[90px]">
           <Advantages
-            title=" Responsible by design"
-            description="Incorporating comprehensive safety measures, these models help ensure
-          responsible and trustworthy AI solutions through curated datasets and
-          rigorous tuning."
+            title="Speaker Sessions"
+            description="Join us for a series of talks by industry experts and researchers in the field of AI and ML. Learn about the latest advancements in the field."
           />
           <Advantages
-            title=" Unmatched performance at size"
-            description="Gemma models achieve exceptional benchmark results at its 2B and 7B sizes, even outperforming some larger open models."
+            title="Hands-on Workshops"
+            description="Get hands-on experience with the latest Gemini APIs, Vertext AI and Gemma. Learn how to build and deploy models with ease."
           />
           <Advantages
-            title="Framework flexible"
-            description="With Keras 3.0, enjoy seamless compatibility with JAX, TensorFlow, and PyTorch, empowering you to effortlessly choose and switch frameworks depending on your task."
+            title="Networking"
+            description="Meet and connect with like-minded developers, researchers and industry professionals. Share your ideas and collaborate on projects."
           />
         </section>
       </div>
