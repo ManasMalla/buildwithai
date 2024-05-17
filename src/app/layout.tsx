@@ -29,6 +29,7 @@ export default function RootLayout({
           type="image/svg+xml"
           href="/assets/images/favicon.svg"
         />*/}
+        <link rel="icon" href="/favicon.png" sizes="any" type="image/png" />
         {/* <link rel="icon" type="image/png" href="/assets/images/favicon.png" /> */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
