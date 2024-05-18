@@ -382,7 +382,7 @@ const MyForm: React.FC = () => {
                 <>
                   <h2 className="text-2xl font-medium">Application Recieved</h2>
                   <p className="text-sm mt-4 mb-8 max-w-[420px]">
-                    You'll be notified of the status of your application soon.
+                    You&apos; be notified of the status of your application soon.
                     <br />
                     Make sure to keep an eye on your email.
                   </p>
