@@ -28,8 +28,11 @@ export default function Home() {
                 1 June 2024
               </p>
               <p className="py-3 px-8 border-[1.2px] border-white/50 rounded-full text-sm w-max">
-                Vignan Institute of Information Technology
+                TBA
               </p>
+              {/* <p className="py-3 px-8 border-[1.2px] border-white/50 rounded-full text-sm w-max">
+                Vignan Institute of Information Technology
+              </p> */}
             </div>
           </div>
         </div>

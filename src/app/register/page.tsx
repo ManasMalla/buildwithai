@@ -106,9 +106,9 @@ const MyForm: React.FC = () => {
 
             <p className="opacity-60 mt-3 text-lg">1st June 2024</p>
 
-            <p className="opacity-60">
+            {/* <p className="opacity-60">
               Vignan Institute of Information Technology, Visakhapatnam
-            </p>
+            </p> */}
           </div>
           <img src="/images/gemini.png" className="w-full " />
         </div>
@@ -175,6 +175,7 @@ const MyForm: React.FC = () => {
                 <option>she/her</option>
                 <option>they/them</option>
               </select>
+
               <div>
                 <p className="font-medium">Mode of Attendence</p>
                 <div className="flex items-center space-x-4 mt-2">
@@ -256,6 +257,7 @@ const MyForm: React.FC = () => {
                   <option>Web</option>
                   <option>Other</option>
                 </select>
+
                 {/* <input
                   type="text"
                   id="university"
@@ -267,6 +269,19 @@ const MyForm: React.FC = () => {
                   className="register-input grow mt-4 w-full"
                 /> */}
               </div>
+
+              <select
+                name="profession"
+                className=" register-input grow md:w-1/3 h-max"
+                onChange={handleSelectChange}
+                required
+              >
+                <option value="">Professional (select)</option>
+                <option>Student</option>
+                <option>Intern</option>
+                <option>Professional</option>
+                <option>Entrepreneur</option>
+              </select>
               <div>
                 <p className="font-medium">
                   Any experience with Gemini API, Google AI Studio, Vertex AI?

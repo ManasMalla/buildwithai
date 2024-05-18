@@ -4,6 +4,7 @@ const initialFormState = {
   email: "",
   gender: "",
   mode: 0,
+  profession: "",
   socialProfile: "",
   university: "",
   whyWow: "",
