@@ -185,7 +185,7 @@ const MyForm: React.FC = () => {
                   id="socialProfile"
                   name="socialProfile"
                   required
-                  placeholder="Website"
+                  placeholder="Link - LinkedIn/GitHub/Other"
                   value={formState.socialProfile}
                   onChange={handleChange}
                   className="register-input w-full"
@@ -256,7 +256,7 @@ const MyForm: React.FC = () => {
                 onChange={handleSelectChange}
                 required
               >
-                <option value="">Professional (select)</option>
+                <option value="">Working Status (select)</option>
                 <option>Student</option>
                 <option>Intern</option>
                 <option>Professional</option>
@@ -320,26 +320,6 @@ const MyForm: React.FC = () => {
             </div> */}
           </div>
           <div>
-            <div className="flex space-x-3">
-              <input type="checkbox" name="terms" required />
-              <p>
-                I agree to the{" "}
-                <button
-                  onClick={() => {
-                    const tcWindow = window
-                      .open(
-                        "/faq#terms-conditions",
-                        "Terms and Conditions | WoW 2024 Visakhapatnam",
-                        "popup, location,status,scrollbars,resizable,width=600, height=600"
-                      )
-                      ?.focus();
-                  }}
-                >
-                  <b>terms and conditions</b>
-                </button>
-                .
-              </p>
-            </div>
             <div className="flex space-x-3">
               <input type="checkbox" name="coc" required />
               <p>

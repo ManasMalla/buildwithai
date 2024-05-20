@@ -22,7 +22,7 @@ export function SignOutDialog() {
           className={`mx-8 md:mx-[unset] p-[40px] bg-white dark:bg-[#202023] text-white rounded-2xl shadow-xl  transition-all duration-300 ${
             modal
               ? "bottom-0 md:translate-y-0 -translate-y-[112px]"
-              : "bottom-0 translate-y-[500px] md:translate-y-[500px]"
+              : "bottom-0 translate-y-[500px] md:translate-y-[1500px] xl:translate-y-[1500px]"
           } `}
         >
           <h2 className="text-2xl font-medium">Sign out?</h2>
