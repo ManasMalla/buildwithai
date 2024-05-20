@@ -29,16 +29,17 @@ export default function Page() {
           Vignan Institute of Information Technology
         </a>
       </h4>
+      <p>Hello</p>
       {user !== null && !pathName.includes("/register") && (
         <Link href="/register" className="flex">
-          <button className="my-3 md:mx-3 mr-0 ml-3 py-[10px]  gemini-btn gemini-gradient  gemini-type-btn font-medium text-sm px-5 rounded-lg">
+          <button className="my-3 relative z-10 md:mx-3 mr-0 ml-3 py-[10px]  gemini-btn gemini-gradient  gemini-type-btn font-medium text-sm px-5 rounded-lg">
             <span>Apply Now</span>
           </button>
         </Link>
       )}
       {user === null && (
         <button
-          className="mr-2 py-2 px-8 font-medium gemini-btn gemini-secondary  gemini-type-btn"
+          className="mr-2 py-2  relative z-10 px-8 font-medium gemini-btn gemini-secondary  gemini-type-btn"
           onClick={() => {
             signInWithGoogleAsPopup(
               (user: User | null) => {

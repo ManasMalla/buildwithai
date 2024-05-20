@@ -1,8 +1,17 @@
+"use client";
 import Advantages from "@/components/Advantages/page";
 import Partners from "@/components/Partners";
+import { useAuthContext } from "@/context/AuthContext";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { signInWithGoogleAsPopup } from "./firebase";
+import { User } from "firebase/auth";
 
 export default function Home() {
+  const router = useRouter();
+  const user = useAuthContext();
+  const pathName = usePathname();
   return (
     <div className="mx-auto">
       <div className="gemini-page gemini-landing">
@@ -35,6 +44,30 @@ export default function Home() {
                 </p>
               </a>
             </div>
+            {user !== null && !pathName.includes("/register") && (
+              <Link href="/register" className="flex">
+                <button className="mt-6 my-3 relative z-10 md:mx-3 mr-0 ml-3 py-[10px]  gemini-btn gemini-gradient  gemini-type-btn font-medium text-sm px-8 rounded-lg">
+                  <span>Apply Now</span>
+                </button>
+              </Link>
+            )}
+            {user === null && (
+              <button
+                className="mt-6 mr-2 py-2  relative z-10 px-8 font-medium gemini-btn gemini-secondary  gemini-type-btn"
+                onClick={() => {
+                  signInWithGoogleAsPopup(
+                    (user: User | null) => {
+                      router.refresh();
+                    },
+                    (failure: string) => {
+                      alert("Error signin in: " + failure);
+                    }
+                  );
+                }}
+              >
+                <span>Sign In To Apply</span>
+              </button>
+            )}
           </div>
         </div>
         <section className="gemini-gem-advantages w-full px-[20px] md:px-[90px]">
