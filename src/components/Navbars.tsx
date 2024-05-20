@@ -76,7 +76,7 @@ export function TopNavigationBar() {
       {user !== null && !pathName.includes("/register") && (
         <Link href="/register" className="flex">
           <button className="my-3 md:mx-3 mr-0 ml-3 py-[10px]  gemini-btn gemini-gradient  gemini-type-btn font-medium text-sm px-5 rounded-lg">
-            <span>Register</span>
+            <span>Apply Now</span>
           </button>
         </Link>
       )}
@@ -94,7 +94,7 @@ export function TopNavigationBar() {
             );
           }}
         >
-          <span>Sign In</span>
+          <span>Sign In To Apply</span>
         </button>
       )}
     </div>

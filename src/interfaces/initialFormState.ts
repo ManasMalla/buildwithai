@@ -6,6 +6,7 @@ interface initialFormState {
   university: '',
   socialProfile: '';
   domain: '';
+  profession: '';
   aiExperience: '';
 }
 

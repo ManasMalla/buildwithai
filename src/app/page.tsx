@@ -1,4 +1,5 @@
 import Advantages from "@/components/Advantages/page";
+import Partners from "@/components/Partners";
 import Image from "next/image";
 
 export default function Home() {
@@ -27,12 +28,12 @@ export default function Home() {
               <p className="py-3 px-8 border-[1.2px] border-white/50 rounded-full text-sm w-max">
                 1 June 2024
               </p>
-              <p className="py-3 px-8 border-[1.2px] border-white/50 rounded-full text-sm w-max">
-                TBA
-              </p>
-              {/* <p className="py-3 px-8 border-[1.2px] border-white/50 rounded-full text-sm w-max">
-                Vignan Institute of Information Technology
-              </p> */}
+
+              <a href="https://maps.app.goo.gl/6H5f1svb2hsCapdFA">
+                <p className="py-3 px-8 border-[1.2px] border-white/50 rounded-full text-sm w-max">
+                  Vignan Institute of Information Technology
+                </p>
+              </a>
             </div>
           </div>
         </div>
@@ -50,6 +51,8 @@ export default function Home() {
             description="Meet and connect with like-minded developers, researchers and industry professionals. Share your ideas and collaborate on projects."
           />
         </section>
+
+        <Partners />
       </div>
     </div>
   );

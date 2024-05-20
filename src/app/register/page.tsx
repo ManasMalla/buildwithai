@@ -106,9 +106,11 @@ const MyForm: React.FC = () => {
 
             <p className="opacity-60 mt-3 text-lg">1st June 2024</p>
 
-            {/* <p className="opacity-60">
-              Vignan Institute of Information Technology, Visakhapatnam
-            </p> */}
+            <a href="https://maps.app.goo.gl/6H5f1svb2hsCapdFA">
+              <p className="opacity-60">
+                Vignan Institute of Information Technology, Visakhapatnam
+              </p>
+            </a>
           </div>
           <img src="/images/gemini.png" className="w-full " />
         </div>
@@ -175,28 +177,6 @@ const MyForm: React.FC = () => {
                 <option>she/her</option>
                 <option>they/them</option>
               </select>
-
-              <div>
-                <p className="font-medium">Mode of Attendence</p>
-                <div className="flex items-center space-x-4 mt-2">
-                  <input
-                    type="radio"
-                    name="mode"
-                    value={0}
-                    required
-                    onChange={handleChange}
-                  />
-                  <p>Offline</p>
-                  <input
-                    type="radio"
-                    name="mode"
-                    value={1}
-                    required
-                    onChange={handleChange}
-                  />
-                  <p>Online</p>
-                </div>
-              </div>
             </div>
             <div className="flex  flex-col md:flex-row md:space-x-8 gap-y-4 md:gap-y-[unset">
               <div className="grow md:w-1/2">
@@ -397,7 +377,8 @@ const MyForm: React.FC = () => {
                 <>
                   <h2 className="text-2xl font-medium">Application Recieved</h2>
                   <p className="text-sm mt-4 mb-8 max-w-[420px]">
-                    You&apos; be notified of the status of your application soon.
+                    You&apos; be notified of the status of your application
+                    soon.
                     <br />
                     Make sure to keep an eye on your email.
                   </p>

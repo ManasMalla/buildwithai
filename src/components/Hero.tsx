@@ -13,7 +13,12 @@ export default function Page() {
         spirit to learn.
       </h2>
       <br />
-      <h4 className="venue-date">8-9 June 2024 · TBA</h4>
+      <h4 className="venue-date">
+        8-9 June 2024 ·{" "}
+        <a href="https://maps.app.goo.gl/6H5f1svb2hsCapdFA">
+          Vignan Institute of Information Technology
+        </a>
+      </h4>
       {/* <div className="flex items-center justify-start space-x-2">
             <button className="py-2 px-6 text-blue-500 rounded border-neutral-300 border text-sm">
               Get your WOW Frame Frame
