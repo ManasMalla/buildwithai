@@ -164,7 +164,17 @@ const MyForm: React.FC = () => {
                 placeholder="Email Address"
                 value={formState.email}
                 onChange={handleChange}
-                className="register-input grow md:w-1/2"
+                className="register-input grow md:w-1/3"
+              />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder="Phone Number"
+                value={formState.phone}
+                onChange={handleChange}
+                className="register-input grow md:w-1/3"
               />
               <select
                 name="gender"
@@ -237,17 +247,6 @@ const MyForm: React.FC = () => {
                   <option>Web</option>
                   <option>Other</option>
                 </select>
-
-                {/* <input
-                  type="text"
-                  id="university"
-                  name="university"
-                  required
-                  placeholder="Institution Name"
-                  value={formState.university}
-                  onChange={handleChange}
-                  className="register-input grow mt-4 w-full"
-                /> */}
               </div>
 
               <select

@@ -3,6 +3,7 @@ const initialFormState = {
   lastName: "",
   email: "",
   gender: "",
+  phone: "",
   mode: 0,
   profession: "",
   socialProfile: "",
