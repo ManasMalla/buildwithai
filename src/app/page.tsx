@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { signInWithGoogleAsPopup } from "./firebase";
 import { User } from "firebase/auth";
+import Speaker from "@/components/Speaker";
 
 export default function Home() {
   const router = useRouter();
@@ -83,6 +84,20 @@ export default function Home() {
             title="Networking"
             description="Meet and connect with like-minded developers, researchers and industry professionals. Share your ideas and collaborate on projects."
           />
+        </section>
+        <h4 className="mb-8 mt-[26.6px] text-xl z-10 text-center relative">
+          Speakers
+        </h4>
+        <section className="gemini-gem-advantages w-full px-[20px] md:px-[90px]">
+          <Speaker
+            title="Gemini as a Backend"
+            name="Anubhav Singh"
+            image=""
+            description=""
+          />
+          <Speaker title="TBA" name="Aashi Dutt" description="" image="" />
+          <Speaker title="TBA" name="Nitin Tiwari" description="" image="" />
+          <Speaker title="TBA" name="Sathish VJ" description="" image="" />
         </section>
 
         <Partners />
