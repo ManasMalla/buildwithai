@@ -85,19 +85,29 @@ export default function Home() {
             description="Meet and connect with like-minded developers, researchers and industry professionals. Share your ideas and collaborate on projects."
           />
         </section>
-        <h4 className="mb-8 mt-[26.6px] text-xl z-10 text-center relative">
+        <h4 className="mb-8 mt-[26.6px] text-3xl z-10 text-center relative">
           Speakers
         </h4>
+        <p className="mb-8 mt-[26.6px] text-3xl z-10 text-center relative"></p>
         <section className="gemini-gem-advantages w-full px-[20px] md:px-[90px]">
           <Speaker
-            title="Gemini as a Backend"
-            name="Anubhav Singh"
-            image=""
+            title="TBA"
+            name="Aashi Dutt"
             description=""
+            image="/images/ashi-dutt.jpg"
           />
-          <Speaker title="TBA" name="Aashi Dutt" description="" image="" />
-          <Speaker title="TBA" name="Nitin Tiwari" description="" image="" />
-          <Speaker title="TBA" name="Sathish VJ" description="" image="" />
+          <Speaker
+            title="TBA"
+            name="Nitin Tiwari"
+            description=""
+            image="/images/nithin-tiwari.jpg"
+          />
+          <Speaker
+            title="Building Production-Ready AI App with Google AI Studio & Vertex AI"
+            name="Sathish VJ"
+            description="Building an AI app is shrouded in media hype and extremely high expectations. In this talk, I show you how to create a full-fledged working app starting with AI Studio and then scaling on Vertex AI."
+            image="/images/sathish-vj.jpg"
+          />
         </section>
 
         <Partners />
