@@ -92,24 +92,37 @@ export default function Home() {
         <section className="gemini-gem-advantages w-full px-[20px] md:px-[90px]">
           <Speaker
             title="TBA"
-            name="Aashi Dutt"
+            name="Sampath Balivada"
             description=""
-            image="/images/ashi-dutt.jpg"
+            image="/images/sampath-balivada.jpg"
           />
           <Speaker
-            title="TBA"
+            title="Venturing into the world of Generative AI with Gemini and Gemma"
             name="Nitin Tiwari"
             description=""
-            image="/images/nithin-tiwari.jpg"
+            image="/images/nitin-tiwari.jpg"
           />
+          <Speaker
+            title="Introducing Gemini Nano: Experience AI magic on-device"
+            name="Manas Malla"
+            description="Build with Gemini Nano, the smallest version of the Gemini model family, can be executed on-device on capable Android devices, enabling seamless interactions with low latency and privacy by design."
+            image="/images/manas-malla.jpeg"
+          />
+        </section>{" "}
+        <section className="gemini-gem-advantages w-full mt-4 px-[20px] md:px-[90px]">
           <Speaker
             title="Building Production-Ready AI App with Google AI Studio & Vertex AI"
             name="Sathish VJ"
             description="Building an AI app is shrouded in media hype and extremely high expectations. In this talk, I show you how to create a full-fledged working app starting with AI Studio and then scaling on Vertex AI."
             image="/images/sathish-vj.jpg"
           />
+          <Speaker
+            title="TBA"
+            name="Pankaj Rai"
+            description=""
+            image="/images/pankaj-rai.jpg"
+          />
         </section>
-
         <Partners />
       </div>
     </div>
